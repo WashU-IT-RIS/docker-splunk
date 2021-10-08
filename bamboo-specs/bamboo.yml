@@ -2,8 +2,8 @@
 version: 2
 plan:
     project-key: RDI
-    key: SPLNK
-    name: Splunk
+    key: SPNKC
+    name: Splunk Container
 
 stages:  # "Build Plan", containing list of stages
     - Prep Auth:  # Stage name, containing list of jobs
