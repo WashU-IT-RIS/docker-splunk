@@ -25,25 +25,6 @@ def resolve_host_from_splunk_config(config_file):
                 return match.group(1)
     raise LookupError('Cannot find "host" config key in %s' % ( config_file ))
 
-# Assumes the container has a 'lo' and one other net device
-def resolve_net_device(expected_dev_name):
-    netdev_find = re.compile(r'\s*(\w+):')
-    devices_found = { }
-    with open('/proc/net/dev') as fh:
-        # There are two header lines
-        header = fh.readline()
-        header = fh.readline()
-        for line in fh:
-            match = netdev_find.match(line)
-            if match:
-                dev_name = match.group(1)
-                devices_found[dev_name] = True
-
-    if expected_dev_name in devices_found:
-        return expected_dev_name
-    else:
-        raise LookupError('Found more than one non-loopback network device: %s' % ( device_names ))
-
 def collect_stats_for_netdev(name):
     find_name = re.compile(r'\s*' + name + r':')
     extract_stats = re.compile(r':\s+(?P<rx_bytes>\d+)\s+(?P<rx_packets>\d+)\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+\d+\s+(?P<tx_bytes>\d+)\s+(?P<tx_packets>\d+)')
@@ -80,11 +61,10 @@ def record_stats(net_stats, msg_stats):
 
 def main():
     host = resolve_host_from_splunk_config(splunk_config_file)
-    netdev = resolve_net_device(expected_net_dev_name)
 
     while True:
         try:
-            net_stats = collect_stats_for_netdev(netdev)
+            net_stats = collect_stats_for_netdev(expected_net_dev_name)
             msg_stats = collect_message_stats_from_splunk(my_hostname=host,
                                                           splunk_server=splunk_search_hostname,
                                                           username='ris-api',
