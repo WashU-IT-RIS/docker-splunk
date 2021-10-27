@@ -15,6 +15,7 @@ splunk_config_file = '/opt/splunkforwarder/etc/apps/SplunkUniversalForwarder/loc
 loop_sleep_time_seconds = 60
 expected_net_dev_name = 'eth0'
 splunk_search_hostname = 'machinedata.wustl.edu'
+metrics_output_file = '/var/lib/prometheus/textfile/splunk_forwarder.prom'
 
 def resolve_host_from_splunk_config(config_file):
     find_host_config = re.compile(r'host\s*=\s*(\S+)')
@@ -48,16 +49,17 @@ def collect_message_stats_from_splunk(my_hostname, splunk_server, username, pass
         # Should only be one row of results
         return { 'messages_last_hour': result['count'] }
 
-def record_stats(net_stats, msg_stats):
-    all_stats = {
-        'splunk_container_tx_bytes':   net_stats['tx_bytes'],
-        'splunk_container_tx_packets': net_stats['tx_packets'],
-        'splunk_container_rx_bytes':   net_stats['rx_bytes'],
-        'splunk_container_rc_packets': net_stats['rx_packets'],
-        'splunk_container_host_messages_last_hour': msg_stats['messages_last_hour'],
-        'splunk_container_timstamp':   time.time(),
-    }
-    print all_stats
+def record_metrics(metrics_file, net_stats, msg_stats):
+    next_metrics_filename = metrics_file + '.next'
+    with open(next_metrics_filename, 'w') as fh:
+        fh.write('splunk_forwarder_transmit_bytes '   + net_stats['tx_bytes'] + "\n")
+        fh.write('splunk_forwarder_transmit_packets ' + net_stats['tx_packets'] + "\n")
+        fh.write('splunk_forwarder_receive_bytes '    + net_stats['rx_bytes'] + "\n")
+        fh.write('splunk_forwarder_receive_packets '  + net_stats['rx_packets'] + "\n")
+        fh.write('splunk_forwarder_host_messages_last_hour ' + msg_stats['messages_last_hour'] + "\n")
+        fh.write('splunk_forwarder_timestamp ' + str(int(time.time())) + "\n")
+
+    os.rename(next_metrics_filename, metrics_file)
 
 def main():
     host = resolve_host_from_splunk_config(splunk_config_file)
@@ -70,7 +72,7 @@ def main():
                                                           username='ris-api',
                                                           password='TRGZnUaJFUcrFY5sXzwSFrPn')
 
-            record_stats(net_stats, msg_stats)
+            record_metrics(metrics_output_file, net_stats, msg_stats)
 
         except Exception as e:
             sys.stderr.write('Caught exception during main loop:\n')
