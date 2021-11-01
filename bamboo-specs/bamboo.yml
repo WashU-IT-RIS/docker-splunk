@@ -6,72 +6,16 @@ plan:
     name: Splunk Container
 
 stages:  # "Build Plan", containing list of stages
-    - Prep Auth:  # Stage name, containing list of jobs
-          - Prep Auth  # Job name
-    - Build Image:
-          - Build
-          - Tag
-    - Push Image:
-          - Push
-    - Cleanup:
-          final: true
-          jobs:
-              - Cleanup
+    - Simple Plan:
+          - Plan Script
 
-Prep Auth:  # Job name, from above, containing description of job
-    tasks:  # Contains a list of individual tasks in the job
-        - inject-variables:
-              file: bamboo-specs/ris_bamboo_vars.ini
-              scope: RESULT
-        - script: |-
-              export DOCKER_CONFIG="$(mktemp -d)"
-              echo "docker_config_path=$DOCKER_CONFIG" > docker_config_path.ini
-              cat > "$DOCKER_CONFIG/config.json" <<<"$bamboo_docker_config_secret"
-        - inject-variables:
-              file: docker_config_path.ini
-              scope: RESULT
-
-Build:
+Plan Script:
     tasks:
-        - script: |-
-              make "${bamboo_inject_ris_container_target}"
-
-Tag:
-    tasks:
-        - script: |-
-              docker tag "${bamboo_inject_ris_container_target}:latest" \
-                         "${bamboo_inject_ris_container_repo_path}:${bamboo_repository_branch_name}"
-              docker tag "${bamboo_inject_ris_container_target}:latest" \
-                         "${bamboo_inject_ris_container_repo_path}:bamboo-build-${bamboo_buildNumber}"
-              if [ "$bamboo_repository_branch_name" == "$bamboo_inject_ris_prod_branch" ] ; then
-                  docker tag "${bamboo_inject_ris_container_target}:latest" \
-                             "${bamboo_inject_ris_container_repo_path}:latest"
-                  docker tag "${bamboo_inject_ris_container_target}:latest" \
-                             "${bamboo_inject_ris_container_repo_path}:production"
-                  docker tag "${bamboo_inject_ris_container_target}:latest" \
-                             "${bamboo_inject_ris_container_repo_path}:${bamboo_inject_ris_splunk_version}"
-              fi
-
-Push:
-    tasks:
-        - script: |-
-              export DOCKER_CONFIG="${bamboo_inject_docker_config_path}"
-              if [ "$bamboo_repository_branch_name" == "$bamboo_inject_ris_prod_branch" ] ; then
-                  docker push "${bamboo_inject_ris_container_repo_path}:latest"
-                  docker push "${bamboo_inject_ris_container_repo_path}:production"
-                  docker push "${bamboo_inject_ris_container_repo_path}:${bamboo_inject_ris_splunk_version}"
-              fi
-              docker push "${bamboo_inject_ris_container_repo_path}:${bamboo_repository_branch_name}"
-              docker push "${bamboo_inject_ris_container_repo_path}:bamboo-build-${bamboo_buildNumber}"
-
-Cleanup:
-    final-tasks:
-        - script: |-
-              set -x
-              if [ -n "$bamboo_inject_docker_config_path" ] ; then
-                  rm "$bamboo_inject_docker_config_path/config.json"
-                  rmdir "$bamboo_inject_docker_config_path"
-              fi
+        - script: bamboo-specs/plan.sh
 
 variables:
     docker_config_secret: BAMSCRT@0@0@Xvs46syEjh13U4msaSYDUaRN4QAf/1VDwK4xuguEFm7QJxAqTAHihtsgOsWvpLTVWSnfv6hvikqjK1C6NV0P2x84WLl3rIYIqVoh/mPFTjiJMf29MhoEm10EVsnnL/QYTHMnSMjztvNkV0ofOzkFRlZPes9OY2O/e0CziYpyv4D8FPEyGL7MwHfraXk47DhLnLiMgt9uQj5FP+bdfrA4PJtm6+keixen0/2H5m8PN3KZP5Lel0EX7Y9n8HqMpeLRI20h0eiDz+IOy5Tl2tN37hJ3FFiYOQErAheCYIau51E9cUrCOqlXfrNYGxGyqn0/+dUAiWDM14SoZjo5FLzOlcCIhPnQX8tjo50k1zTZZL2/bvYTNVE46PqjTorvbJOkvvzYY+sLek77e/S+IFrv9opNcNFuKhRfYHfgAZJPXtO2QpHJBcX8UHIZSRhiKHdj
+    ris_container_repo_path: registry.gsc.wustl.edu/ris1/splunk
+    ris_container_target: uf-centos-7
+    ris_splunk_version: 8.2.1
+    ris_prod_branch: ris_production
