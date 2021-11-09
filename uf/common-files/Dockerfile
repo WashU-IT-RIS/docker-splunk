@@ -33,6 +33,16 @@ COPY uf/common-files/apps ${SPLUNK_HOME}-etc/apps/
 
 
 #
+# Get the splunk API libraries
+#
+FROM python:2.7 as python
+
+RUN mkdir /splunklibs \
+    && pip install --prefix /splunklibs splunklib \
+    && pip install --prefix /splunklibs splunk-sdk
+
+
+#
 # Bare Splunk Universal Forwarder Image without Ansible (BYO entrypoint)
 #
 FROM ${SPLUNK_BASE_IMAGE}:latest as bare
@@ -58,6 +68,12 @@ RUN groupadd -r -g ${GID} ${SPLUNK_GROUP} \
 
 # Copy files from package
 COPY --from=package --chown=splunk:splunk /opt /opt
+
+# Copy splunk python libs
+COPY --from=python --chown=splunk:splunk /splunklibs /splunklibs
+
+# The prometheus monitoring script
+COPY ris-additions/prometheus-splunk-forwarder-metrics.py /sbin/prometheus-splunk-forwarder-metrics.py
 
 USER ${SPLUNK_USER}
 WORKDIR ${SPLUNK_HOME}
