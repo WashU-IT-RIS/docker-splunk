@@ -5,6 +5,10 @@ docker tag "${bamboo_ris_container_target}:latest" \
            "${bamboo_ris_container_repo_path}:${bamboo_repository_branch_name}"
 docker tag "${bamboo_ris_container_target}:latest" \
            "${bamboo_ris_container_repo_path}:bamboo-build-${bamboo_buildNumber}"
+docker tag "${bamboo_ris_container_target}:latest" \
+           "${bamboo_ris_container_gcp_repo_path}:${bamboo_repository_branch_name}"
+docker tag "${bamboo_ris_container_target}:latest" \
+           "${bamboo_ris_container_gcp_repo_path}:bamboo-build-${bamboo_buildNumber}"
 if [ "$bamboo_repository_branch_name" == "$bamboo_ris_prod_branch" ] ; then
     docker tag "${bamboo_ris_container_target}:latest" \
                "${bamboo_ris_container_repo_path}:latest"
@@ -12,4 +16,10 @@ if [ "$bamboo_repository_branch_name" == "$bamboo_ris_prod_branch" ] ; then
                "${bamboo_ris_container_repo_path}:production"
     docker tag "${bamboo_ris_container_target}:latest" \
                "${bamboo_ris_container_repo_path}:${bamboo_ris_splunk_version}"
+    docker tag "${bamboo_ris_container_target}:latest" \
+               "${bamboo_ris_container_gcp_repo_path}:latest"
+    docker tag "${bamboo_ris_container_target}:latest" \
+               "${bamboo_ris_container_gcp_repo_path}:production"
+    docker tag "${bamboo_ris_container_target}:latest" \
+               "${bamboo_ris_container_gcp_repo_path}:${bamboo_ris_splunk_version}"
 fi
