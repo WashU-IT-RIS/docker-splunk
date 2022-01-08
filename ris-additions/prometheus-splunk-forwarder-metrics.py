@@ -99,4 +99,24 @@ def main():
         time.sleep(loop_sleep_time_seconds)
 
 if __name__ == '__main__':
+    # Become a daemon process
+    try:
+        pid = os.fork()
+        if pid > 0:
+            # In parent process, exit
+            sys.exit(0)
+    except OSError as e:
+        sys.stderr.write("fork() failed: %d (%s)\n" % ( e.errno, e.splunkforwarder))
+        sys.exit(1)
+
+    try:
+        pid = os.fork()
+        if pid > 0:
+            # Second parent process
+            sys.stderr.write("Metrics daemon PID %d\n" % ( pid ))
+            sys.exit(0)
+    except OSError as e:
+        sys.stderr.write("fork() failed: %d (%s)\n" % ( e.errno, e.splunkforwarder))
+        sys.exit(1)
+
     main()
