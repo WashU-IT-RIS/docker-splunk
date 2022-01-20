@@ -40,8 +40,7 @@ class NetDevCollector(object):
 # Collect stats from the central IT instance of splunk about this particular host
 class SplunkStatsCollector(object):
     def __init__(self, splunk_config_file, splunk_server, username, password):
-        #self.hostname = self.resolve_host_from_splunk_config(splunk_config_file)
-        self.hostname = 'compute-dev-client-1'
+        self.hostname = self.resolve_host_from_splunk_config(splunk_config_file)
         self.splunk_server = splunk_server
         self.username = username
         self.password = password
