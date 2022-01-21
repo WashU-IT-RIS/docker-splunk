@@ -34,13 +34,14 @@ COPY uf/common-files/apps ${SPLUNK_HOME}-etc/apps/
 
 #
 # Get the splunk API libraries
+# Get the prometheus exporter libraries
 #
 FROM python:2.7 as python
 
 RUN mkdir /splunklibs \
     && pip install --prefix /splunklibs splunklib \
-    && pip install --prefix /splunklibs splunk-sdk
-
+    && pip install --prefix /splunklibs splunk-sdk \
+    && pip install --prefix /splunklibs prometheus_client
 
 #
 # Bare Splunk Universal Forwarder Image without Ansible (BYO entrypoint)
@@ -77,7 +78,7 @@ COPY ris-additions/prometheus-splunk-forwarder-metrics.py /sbin/prometheus-splun
 
 USER ${SPLUNK_USER}
 WORKDIR ${SPLUNK_HOME}
-EXPOSE 8089 8088 9997
+EXPOSE 8089 8088 9997 9001
 VOLUME [ "/opt/splunkforwarder/etc", "/opt/splunkforwarder/var" ]
 
 
