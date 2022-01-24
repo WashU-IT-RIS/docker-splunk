@@ -16,6 +16,7 @@ Plan Script:
 variables:
     docker_config_secret: BAMSCRT@0@0@Xvs46syEjh13U4msaSYDUaRN4QAf/1VDwK4xuguEFm7QJxAqTAHihtsgOsWvpLTVWSnfv6hvikqjK1C6NV0P2x84WLl3rIYIqVoh/mPFTjiJMf29MhoEm10EVsnnL/QYTHMnSMjztvNkV0ofOzkFRlZPes9OY2O/e0CziYpyv4D8FPEyGL7MwHfraXk47DhLnLiMgt9uQj5FP+bdfrA4PJtm6+keixen0/2H5m8PN3KZP5Lel0EX7Y9n8HqMpeLRI20h0eiDz+IOy5Tl2tN37hJ3FFiYOQErAheCYIau51E9cUrCOqlXfrNYGxGyqn0/+dUAiWDM14SoZjo5FLzOlcCIhPnQX8tjo50k1zTZZL2/bvYTNVE46PqjTorvbJOkvvzYY+sLek77e/S+IFrv9opNcNFuKhRfYHfgAZJPXtO2QpHJBcX8UHIZSRhiKHdj
     ris_container_repo_path: registry.gsc.wustl.edu/ris1/splunk
+    ris_container_gcp_repo_path: gcr.io/ris-registry-shared/splunk
     ris_container_target: uf-centos-7
     ris_splunk_version: 8.2.1
     ris_prod_branch: ris_production
