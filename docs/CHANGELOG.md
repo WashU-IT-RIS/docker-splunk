@@ -10,14 +10,58 @@ Red Hat images will continue to be published.
 
 ## Navigation
 
+* [9.2.1](#921)
+* [9.2.0.1](#9201)
+* [9.2.0](#920)
+* [9.1.4](#914)
+* [9.1.3](#913)
+* [9.1.2](#912)
+* [9.1.1](#911)
+* [9.1.0.2](#9102)
+* [9.1.0.1](#9101)
+* [9.0.9](#909)
+* [9.0.8](#908)
+* [9.0.7](#907)
+* [9.0.6](#906)
+* [9.0.5.1](#9051)
+* [9.0.5](#905)
+* [9.0.4.1](#9041)
+* [9.0.4](#904)
+* [9.0.2](#902)
+* [9.0.1](#901)
+* [9.0.0.1](#9001)
+* [9.0.0](#900)
+* [8.2.12](#8212)
+* [8.2.11](#8211)
+* [8.2.10](#8210)
+* [8.2.9](#829)
+* [8.2.8](#828)
+* [8.2.7](#827)
+* [8.2.6](#826)
+* [8.2.5](#825)
+* [8.2.4](#824)
+* [8.2.3.3](#8233)
+* [8.2.3.2](#8232)
+* [8.2.3](#823)
+* [8.2.2](#822)
 * [8.2.1](#821)
 * [8.2.0](#820)
+* [8.1.14](#8114)
+* [8.1.13](#8113)
+* [8.1.12](#8112)
+* [8.1.11](#8111)
+* [8.1.10](#8110)
+* [8.1.7](#817)
+* [8.1.7.1](#8171)
+* [8.1.6](#816)
+* [8.1.5](#815)
 * [8.1.4](#814)
 * [8.1.3](#813)
 * [8.1.2](#812)
 * [8.1.1](#811)
 * [8.1.0.1](#8101)
 * [8.1.0](#810)
+* [8.0.10](#8010)
 * [8.0.9](#809)
 * [8.0.8](#808)
 * [8.0.7](#807)
@@ -59,6 +103,422 @@ Red Hat images will continue to be published.
 
 ---
 
+## 9.2.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.2.1](https://docs.splunk.com/Documentation/Splunk/9.2.1/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.2.1)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+
+## 9.2.0.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.2.0.1](https://docs.splunk.com/Documentation/Splunk/9.2.0.1/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.2.0.1)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+
+## 9.2.0
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.2.0](https://docs.splunk.com/Documentation/Splunk/9.2.0/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.2.0)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+
+## 9.1.4
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.4](https://docs.splunk.com/Documentation/Splunk/9.1.4/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.4)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+
+## 9.1.3
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.3](https://docs.splunk.com/Documentation/Splunk/9.1.3/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.3)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+## 9.1.2
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.2](https://docs.splunk.com/Documentation/Splunk/9.1.2/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.2)
+
+#### splunk-ansible changes:
+* Docs updated
+* Bugfixes
+
+---
+## 9.1.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.1](https://docs.splunk.com/Documentation/Splunk/9.1.1/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.1)
+
+#### splunk-ansible changes:
+* Docs updated
+
+---
+## 9.1.0.2
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.0.2](https://docs.splunk.com/Documentation/Splunk/9.1.0.2/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.0.2)
+
+#### splunk-ansible changes:
+* Docs updated
+
+---
+## 9.1.0.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.1.0.1](https://docs.splunk.com/Documentation/Splunk/9.1.0.1/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.1.0.1)
+
+#### splunk-ansible changes:
+* Docs updated
+
+---
+
+## 9.0.9
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.9](https://docs.splunk.com/Documentation/Splunk/9.0.9/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.9)
+
+---
+
+## 9.0.8
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.8](https://docs.splunk.com/Documentation/Splunk/9.0.8/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.8)
+
+---
+
+## 9.0.7
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.7](https://docs.splunk.com/Documentation/Splunk/9.0.7/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.7)
+
+---
+
+## 9.0.6
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.6](https://docs.splunk.com/Documentation/Splunk/9.0.6/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.6)
+
+---
+
+## 9.0.5.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.5.1](https://docs.splunk.com/Documentation/Splunk/9.0.5/ReleaseNotes/MeetSplunk#What.27s_New_in_9.0.5.1)
+
+#### splunk-ansible changes:
+* Docs updated
+
+---
+
+## 9.0.5
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.5](https://docs.splunk.com/Documentation/Splunk/9.0.5/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.5)
+* DISCONTINUE SCLOUD support. SCLOUD can be fetched and installed using provisions. [SCLOUD can be found here.](https://github.com/splunk/splunk-cloud-sdk-go)
+
+#### splunk-ansible changes:
+* Bugfixes
+* Increase timeout for Splunk process to be up and running
+
+---
+
+## 9.0.4.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.4.1](https://docs.splunk.com/Documentation/Splunk/9.0.4/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.4.1)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 9.0.4
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.4](https://docs.splunk.com/Documentation/Splunk/9.0.4/ReleaseNotes/Fixedissues)
+* Security patches & errata fixes
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 9.0.2
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.2](https://docs.splunk.com/Documentation/Splunk/9.0.2/ReleaseNotes/Fixedissues)
+* Security patches & errata fixes
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 9.0.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.1](https://docs.splunk.com/Documentation/Splunk/9.0.1/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 9.0.0.1
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 9.0.0.1](https://docs.splunk.com/Documentation/Splunk/9.0.0/ReleaseNotes/Fixedissues#Splunk_Enterprise_9.0.0.1)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 9.0.0
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Release notes for 9.0.0](https://docs.splunk.com/Documentation/Splunk/9.0.0/ReleaseNotes/)
+* Security patches & errata fixes
+
+#### splunk-ansible changes:
+* Patch support for new major Splunk release
+* Documentation updates + bugfixes
+---
+
+## 8.2.12
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.12](https://docs.splunk.com/Documentation/Splunk/8.2.12/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.2.11
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.11](https://docs.splunk.com/Documentation/Splunk/8.2.11/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.2.10
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.10](https://docs.splunk.com/Documentation/Splunk/8.2.10/ReleaseNotes/Fixedissues)
+---
+
+## 8.2.9
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.9](https://docs.splunk.com/Documentation/Splunk/8.2.9/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.8
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.8](https://docs.splunk.com/Documentation/Splunk/8.2.8/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.7
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.7](https://docs.splunk.com/Documentation/Splunk/8.2.7/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.6
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.6](https://docs.splunk.com/Documentation/Splunk/8.2.6/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.5
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.5](https://docs.splunk.com/Documentation/Splunk/8.2.5/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.4
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.4](https://docs.splunk.com/Documentation/Splunk/8.2.4/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.3.3
+
+#### What's New?
+* New Splunk Enterprise security patch. For details, see [Fixed issues for 8.2.3.3](https://docs.splunk.com/Documentation/Splunk/8.2.3/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.2.3.2
+
+#### What's New?
+* New Splunk Enterprise security patch. For details, see [Fixed issues for 8.2.3.2](https://docs.splunk.com/Documentation/Splunk/8.2.3/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.2.3
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.3](https://docs.splunk.com/Documentation/Splunk/8.2.3/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bugfixes
+
+---
+
+## 8.2.2
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.2.2](https://docs.splunk.com/Documentation/Splunk/8.2.2/ReleaseNotes/Fixedissues)
+* Security patches & errata fixes
+
+#### splunk-ansible changes:
+* Support for installing apps directly to a given path using `app_paths_install`. See our [documentation](https://splunk.github.io/splunk-ansible/ADVANCED.html#apps) for details.
+
+---
+
 ## 8.2.1
 
 #### What's New?
@@ -88,6 +548,131 @@ Red Hat images will continue to be published.
 * Added support for setting `clientName` in `deploymentclient.conf`
     * `splunk.deployment_client.name` in `default.yml`
     * `SPLUNK_DEPLOYMENT_CLIENT_NAME` environment variable
+
+---
+
+## 8.1.14
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.1.14](https://docs.splunk.com/Documentation/Splunk/8.1.14/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.1.13
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.1.13](https://docs.splunk.com/Documentation/Splunk/8.1.13/ReleaseNotes/Fixedissues)
+
+---
+
+## 8.1.12
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.1.12](https://docs.splunk.com/Documentation/Splunk/8.1.12/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bump version tag.
+
+---
+
+## 8.1.11
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.1.11](https://docs.splunk.com/Documentation/Splunk/8.1.11/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bump version tag.
+
+---
+
+## 8.1.10
+
+#### What's New?
+* Releasing new images to support Splunk Enterprise release.
+
+#### docker-splunk changes:
+* Bumping Splunk version. For details, see [Fixed issues for 8.1.10](https://docs.splunk.com/Documentation/Splunk/8.1.10/ReleaseNotes/Fixedissues)
+
+#### splunk-ansible changes:
+* Bump version tag.
+
+---
+
+## 8.1.7.1
+
+#### What's New?
+* New Splunk Enterprise security patch. For details, see [Fixed issues for 8.1.7](https://docs.splunk.com/Documentation/Splunk/8.1.7/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.3.2](#8232)
+
+#### Changes
+* See [8.2.3.2](#8232) changes
+
+---
+
+## 8.1.9
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.1.9](https://docs.splunk.com/Documentation/Splunk/8.1.9/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.5](#825)
+
+#### Changes
+* See [8.2.5](#825) changes
+
+---
+
+## 8.1.8
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.1.8](https://docs.splunk.com/Documentation/Splunk/8.1.8/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.4](#824)
+
+#### Changes
+* See [8.2.4](#824) changes
+
+---
+
+## 8.1.7
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.1.7](https://docs.splunk.com/Documentation/Splunk/8.1.7/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.3](#823)
+
+#### Changes
+* See [8.2.3](#823) changes
+
+---
+
+## 8.1.6
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.1.6](https://docs.splunk.com/Documentation/Splunk/8.1.6/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.2](#822)
+
+#### Changes
+* See [8.2.2](#822) changes
+
+---
+
+## 8.1.5
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.1.5](https://docs.splunk.com/Documentation/Splunk/8.1.5/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.1](#821)
+
+#### Changes
+* See [8.2.1](#821) changes
 
 ---
 
@@ -181,6 +766,17 @@ Red Hat images will continue to be published.
 * Enabled multisite for the `splunk_monitor` role
 * Enabled local indexing on the license master
 * Bugfixes and cleanup
+
+---
+
+## 8.0.10
+
+#### What's New?
+* New Splunk Enterprise maintenance patch. For details, see [Fixed issues for 8.0.10](https://docs.splunk.com/Documentation/Splunk/8.0.10/ReleaseNotes/Fixedissues)
+* Bundling in changes to be consistent with the release of [8.2.1](#821)
+
+#### Changes
+* See [8.2.1](#821) changes
 
 ---
 
